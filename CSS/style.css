@@ -1,0 +1,147 @@
+body {
+    background: linear-gradient(180deg, #181818 0%, #141414 100%);
+    color: #FFFFFF;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+h1 {
+color: #E50914;
+font-weight: bold;
+font-size: 3vw;
+margin-bottom: 40px;
+letter-spacing: 1px;
+text-align:left;
+}
+
+h2 {
+font-size: 1.4rem;
+color: #E5E5E5;
+margin-top: 40px;
+margin-bottom: 10px;
+padding-left: 10px;
+}
+
+.contenedor-perfiles {
+display: flex;
+gap: 40px;
+justify-content: center;
+margin-bottom: 50px;
+border-bottom: 1px solid #333;
+padding-bottom: 40px;
+}
+
+.perfil {
+text-align: center;    
+cursor: pointer;
+text-decoration: none;
+color: #808080;
+transition: transform 0.3s ease, color 0.3s ease;
+
+}
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    border: 3px solid transparent;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+}
+.kids { 
+    background-color: #00A8E8;
+}
+
+.cinefilo { 
+    background-color: #E50914; 
+}
+
+/* tramsformacion del cuadro*/
+.perfil:hover {
+transform: scale(1.08);
+color: #FFFFFF;
+}
+
+/* sombra*/
+.perfil:hover .avatar {
+border-color: #FFFFFF;
+box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+}
+/* hasta aqui va el CSS del index*/
+
+.fila-peliculas {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 15px 10px;
+    scroll-behavior: smooth;
+}
+
+.pelicula {
+flex: 0 0 400px; /*medida  horizontal */
+height: 225px;/* medida vertical*/
+cursor: pointer;
+border-radius: 6px;
+overflow: hidden;
+position: relative; /* permite que el texto flote adentro */
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*oculto el texto para que se vea solo con el hoover*/
+.info-pelicula {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
+padding: 30px 10px 10px 10px; 
+font-size: 0.95rem;
+font-weight: bold;
+color: #FFFFFF;
+text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+
+.pelicula:hover {
+transform: scale(1.06); /* vrece un poco */
+box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.9);/*sombra*/
+z-index: 10; /* se posiciona al frente */
+}
+/* aparece el texto*/
+.pelicula:hover .info-pelicula {
+    opacity: 1;
+}
+.boton-regresar{
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    width: 80px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 0px;
+    margin-right: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.boton-regresar:hover {
+    background-color: #555555;
+    transform: scale(1.06); 
+}
+.Matrix{
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    margin-top: 40px;         
+    margin-bottom: 40px;      
+}
+body.fondo-azul {
+    background: linear-gradient(180deg, #3388e3 0%, #5e6163 100%);
+}
